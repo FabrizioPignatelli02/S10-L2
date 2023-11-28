@@ -1,1 +1,10 @@
-<p>new-user works!</p>
+<p>
+  <input type="text" class="form-control" [(ngModel)]="name" />
+  <button
+    type="button"
+    class="btn btn-sm btn-success ms-2"
+    (click)="onNewUser(name)"
+  >
+    Invia Nome
+  </button>
+</p>

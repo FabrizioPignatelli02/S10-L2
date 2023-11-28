@@ -18,6 +18,10 @@ const routes: Route[] = [
   {
     path: "pagina",
     component: PaginaComponent
+  },
+  {
+    path: "nuovoUtente",
+    component: NewUserComponent
   }
 ]
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/service/users.service';
 
 @Component({
   selector: 'app-new-user',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewUserComponent implements OnInit {
 
-  constructor() { }
+  name!: string;
+
+  constructor(private userSrv: UsersService) { }
 
   ngOnInit(): void {
+  }
+
+  onNewUser(nome: string){
+    this.userSrv.creaUtente(nome)
   }
 
 }
